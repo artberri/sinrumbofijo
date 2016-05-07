@@ -1,0 +1,15 @@
+.bundle/
+.librarian/
+.tmp/
+.vagrant/
+modules/
+vendor/
+
+src/wp-config.php
+src/wp/
+src/Search-Replace-DB-master
+src/wp-content/
+!src/wp-content/themes/nisarg-child
+
+Gemfile.lock
+Puppetfile.lock
