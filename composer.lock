@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5142532a5c67f888a32999d7d7789f82",
-    "content-hash": "e886cc05091c75ff2056df0e01257f34",
+    "hash": "3099c69c1e50ecc8eafeae32aacddb1e",
+    "content-hash": "686dc400df37bc9357c8df67e288e884",
     "packages": [
         {
             "name": "composer/installers",
@@ -211,6 +211,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/simple-facebook-twitter-widget",
+            "version": "1.4.13",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-facebook-twitter-widget/",
+                "reference": "tags/1.4.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-facebook-twitter-widget.1.4.13.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-facebook-twitter-widget/"
         },
         {
             "name": "wpackagist-plugin/wpsocialite",

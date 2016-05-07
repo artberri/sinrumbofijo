@@ -11,6 +11,12 @@ src/Search-Replace-DB-master
 src/wp-content/plugins/*
 src/wp-content/themes/*
 src/wp-content/uploads/*
+src/wp-content/2010/*
+src/wp-content/2011/*
+src/wp-content/2012/*
+src/wp-content/2016/*
+src/wp-content/2017/*
+src/wp-content/2018/*
 !src/wp-content/themes/harmonux-core-child/
 src/wp-content/*.jpg
 src/wp-content/*.png
