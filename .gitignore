@@ -8,8 +8,13 @@ vendor/
 src/wp-config.php
 src/wp/
 src/Search-Replace-DB-master
-src/wp-content/
-!src/wp-content/themes/nisarg-child
+src/wp-content/plugins/*
+src/wp-content/themes/*
+src/wp-content/uploads/*
+!src/wp-content/themes/nisarg-child/
+src/wp-content/*.jpg
+src/wp-content/*.png
+src/wp-content/*.gif
 
 Gemfile.lock
 Puppetfile.lock
