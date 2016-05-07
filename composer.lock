@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7788518eb50b89954bfcae5e7a159bc6",
-    "content-hash": "373a04d166a3ab9d5f0ba5187c954c39",
+    "hash": "5142532a5c67f888a32999d7d7789f82",
+    "content-hash": "e886cc05091c75ff2056df0e01257f34",
     "packages": [
         {
             "name": "composer/installers",
@@ -213,16 +213,36 @@
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
-            "name": "wpackagist-theme/nisarg",
-            "version": "1.2.5",
+            "name": "wpackagist-plugin/wpsocialite",
+            "version": "2.4.1",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/nisarg/",
-                "reference": "1.2.5"
+                "url": "https://plugins.svn.wordpress.org/wpsocialite/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/nisarg.1.2.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wpsocialite.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpsocialite/"
+        },
+        {
+            "name": "wpackagist-theme/harmonux-core",
+            "version": "1.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/harmonux-core/",
+                "reference": "1.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/harmonux-core.1.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -230,7 +250,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/nisarg/"
+            "homepage": "https://wordpress.org/themes/harmonux-core/"
         }
     ],
     "packages-dev": [],
