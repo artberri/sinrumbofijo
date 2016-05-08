@@ -20,7 +20,9 @@
     "require-dev": {
         "composer/installers": "1.*",
         "deployer/deployer": "^3.2",
-        "deployphp/recipes": "^3.1"
+        "deployphp/recipes": "^3.1",
+        "squizlabs/php_codesniffer": "^2.6",
+        "wp-coding-standards/wpcs": "dev-master"
     },
     "extra": {
         "wordpress-install-dir": "src/wp",

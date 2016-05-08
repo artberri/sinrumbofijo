@@ -1,3 +1,5 @@
+dev: {}
+
 staging:
   host: staging.sinrumbofijo.com
   user: deploy
