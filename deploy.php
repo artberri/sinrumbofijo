@@ -8,6 +8,8 @@ date_default_timezone_set('UTC');
 set('keep_releases', 5);
 set('shared_dirs', [
     'wp-content/uploads',
+]);
+set('shared_files', [
     'wp-config.php',
 ]);
 set('writable_use_sudo', false);
