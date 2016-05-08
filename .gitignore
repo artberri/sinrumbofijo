@@ -21,6 +21,8 @@ src/wp-content/2018/*
 src/wp-content/*.jpg
 src/wp-content/*.png
 src/wp-content/*.gif
+src/wp-content/cache/
+src/robots.txt
 
 Gemfile.lock
 Puppetfile.lock

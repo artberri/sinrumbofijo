@@ -7,15 +7,6 @@
 <div class="post-box">
 	<div class="row">
 		<div class="columns large-2 medium-2">
-			<?php
-			if(function_exists('wpsocialite_markup')){
-				?>
-				<div class="smartlib-soical-widgets">
-					<?php	srf_wpsocialite_markup(); ?>
-				</div>
-				<?php
-			}
-			?>
 			<?php harmonux_entry_tags() ?>
 		</div>
 		<div class="columns large-14 medium-14">

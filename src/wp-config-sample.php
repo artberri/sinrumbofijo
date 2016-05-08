@@ -1,5 +1,8 @@
 <?php
 
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define('WPCACHEHOME', '/vagrant/sinrumbofijo/src/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
+
 define('DB_NAME', '');
 define('DB_USER', '');
 define('DB_PASSWORD', '');

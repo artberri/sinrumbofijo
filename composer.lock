@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3099c69c1e50ecc8eafeae32aacddb1e",
-    "content-hash": "686dc400df37bc9357c8df67e288e884",
+    "hash": "a452bb0134d66fac7717b06838e93fd5",
+    "content-hash": "798fb51e22c8b230f6e17e05122490c8",
     "packages": [
         {
             "name": "composer/installers",
@@ -193,6 +193,66 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "wpackagist-plugin/contact-form-to-email",
+            "version": "1.1.36",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-to-email/",
+                "reference": "tags/1.1.36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-to-email.1.1.36.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-to-email/"
+        },
+        {
+            "name": "wpackagist-plugin/default-featured-image",
+            "version": "1.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/default-featured-image/",
+                "reference": "tags/1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/default-featured-image.1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/default-featured-image/"
+        },
+        {
+            "name": "wpackagist-plugin/gator-cache",
+            "version": "2.0.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gator-cache/",
+                "reference": "tags/2.0.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gator-cache.2.0.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gator-cache/"
+        },
+        {
             "name": "wpackagist-plugin/regenerate-thumbnails",
             "version": "2.2.6",
             "source": {
@@ -231,6 +291,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/simple-facebook-twitter-widget/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "3.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/3.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.2.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-plugin/wpsocialite",

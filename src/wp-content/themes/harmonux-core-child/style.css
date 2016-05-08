@@ -10,3 +10,7 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  harmonux
 */
+
+.smartlib-tags-article a:after {
+  display: none;
+}
