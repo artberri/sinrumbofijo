@@ -16,7 +16,8 @@
         "wpackagist-plugin/gator-cache": "2.0.*",
         "wpackagist-plugin/default-featured-image": "1.6.*",
         "wpackagist-plugin/contact-form-to-email": "1.1.*",
-        "wpackagist-theme/harmonux-core": "1.3.*"
+        "wpackagist-theme/harmonux-core": "1.3.*",
+        "deployer/deployer": "^3.2"
     },
     "extra": {
         "wordpress-install-dir": "src/wp",
