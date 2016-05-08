@@ -9,6 +9,7 @@ staging:
   deploy_path: /home/www/staging.sinrumbofijo.com
   app:
     url: http://sinrumbofijo.local
+    root: ''
     db:
       name: ''
       user: ''

@@ -17,7 +17,7 @@ define('SECURE_AUTH_SALT', '{{app.secret.secure_auth_salt}}');
 define('LOGGED_IN_SALT',   '{{app.secret.logged_in_salt}}');
 define('NONCE_SALT',       '{{app.secret.nonce_salt}}');
 
-define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content');
+define('WP_CONTENT_DIR', '{{app.root}}/wp-content');
 define('WP_CONTENT_URL', '{{app.url}}/wp-content');
 
 define('WP_HOME', '{{app.url}}');
@@ -35,6 +35,6 @@ define('AUTOMATIC_UPDATER_DISABLED', true);
 $table_prefix  = 'wp_';
 
 if ( ! defined( 'ABSPATH' ) ) {
-    define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+    define( 'ABSPATH', '{{app.root}}/wp/' );
 }
 require_once( ABSPATH . 'wp-settings.php' );
