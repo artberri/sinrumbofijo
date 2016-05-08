@@ -8,6 +8,7 @@ date_default_timezone_set('UTC');
 set('keep_releases', 5);
 set('shared_dirs', [
     'wp-content/uploads',
+    'wp-config.php',
 ]);
 set('writable_use_sudo', false);
 set('http_user', 'deploy');
@@ -15,8 +16,8 @@ set('http_user', 'deploy');
 env('rsync_src', __DIR__ . '/src');
 set('rsync', [
     'exclude' => [
-        '.git',
-        'deploy.php',
+        'wp-content/upgrade',
+        'wp-content/cache',
         'wp-config.php',
         'wp-content/uploads',
     ],
