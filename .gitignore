@@ -26,3 +26,7 @@ src/robots.txt
 
 Gemfile.lock
 Puppetfile.lock
+
+deploy_rsa
+deploy_rsa.pub
+servers.yml

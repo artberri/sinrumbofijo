@@ -1,0 +1,25 @@
+staging:
+  host: staging.sinrumbofijo.com
+  user: deploy
+  identity_file:
+    public_key:  deploy_rsa.pub
+    private_key: deploy_rsa
+    password:    ''
+  stage: staging
+  deploy_path: /home/www/staging.sinrumbofijo.com
+  app:
+    url: http://sinrumbofijo.local
+    db:
+      name: ''
+      user: ''
+      pass: ''
+      host: 'localhost'
+    secret:
+      auth_key: ''
+      secure_auth_key: ''
+      logged_in_key: ''
+      nonce_key: ''
+      auth_salt: ''
+      secure_auth_salt: ''
+      logged_in_salt: ''
+      nonce_salt: ''
