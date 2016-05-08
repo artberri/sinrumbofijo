@@ -11,6 +11,7 @@ set('shared_dirs', [
 ]);
 set('shared_files', [
     'wp-config.php',
+    'wp/gc-config.ini.php',
 ]);
 set('writable_use_sudo', false);
 set('http_user', 'deploy');
