@@ -1,11 +1,12 @@
 class profiles::configurations::sinrumbofijo::php {
 
   $extensions = {
-    'pdo'      => {},
-    'mysqlnd'  => {},
-    'xml'      => {},
-    'gd'       => {},
-    'mbstring' => {},
+    'pdo'         => {},
+    'mysqlnd'     => {},
+    'xml'         => {},
+    'gd'          => {},
+    'mbstring'    => {},
+    'pecl-xdebug' => {},
   }
 
   $settings = {
