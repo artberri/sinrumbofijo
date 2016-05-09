@@ -15,7 +15,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     tm.vm.synced_folder ".", "/vagrant", disabled: true
     tm.vm.synced_folder ".", "/vagrant/sinrumbofijo",
       type: "nfs",
-      mount_options: ['rw', 'vers=3', 'tcp', 'fsc' ,'actimeo=2']
+      nfs_udp: false,
+      mount_options: ['rw', 'tcp', 'nolock', 'noacl', 'async', 'vers=3', 'fsc' ,'actimeo=2']
 
     tm.vm.provider "virtualbox" do |vb|
       #   # Display the VirtualBox GUI when booting the machine

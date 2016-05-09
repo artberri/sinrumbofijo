@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1f4a0badb1cd12c80c995a6a8c3ac6c6",
-    "content-hash": "5c3d1c14bf2b14ebe813f7337b8532a2",
+    "hash": "b38d121ca506ed5b8a2e9c1d44af99ee",
+    "content-hash": "f0075bee56979708338a9d5bcfaa941f",
     "packages": [
         {
             "name": "composer/installers",
@@ -191,6 +191,26 @@
                 "wordpress"
             ],
             "time": "2015-06-11 15:15:30"
+        },
+        {
+            "name": "wpackagist-plugin/autoptimize",
+            "version": "2.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autoptimize/",
+                "reference": "tags/2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autoptimize/"
         },
         {
             "name": "wpackagist-plugin/contact-form-to-email",

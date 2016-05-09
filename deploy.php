@@ -9,6 +9,7 @@ date_default_timezone_set('UTC');
 set('keep_releases', 5);
 set('shared_dirs', [
     'wp-content/uploads',
+    'wp-content/cache',
 ]);
 set('shared_files', [
     'wp-config.php',
