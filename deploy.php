@@ -1,4 +1,6 @@
 <?php
+use Deployer\Deployer;
+
 require 'recipe/common.php';
 require 'vendor/deployphp/recipes/recipes/configure.php';
 require 'vendor/deployphp/recipes/recipes/rsync.php';
@@ -6,19 +8,24 @@ require 'recipes/qa.php';
 
 date_default_timezone_set('UTC');
 
-set('keep_releases', 5);
-set('shared_dirs', [
+function deployset($key, $value)
+{
+    Deployer::get()->parameters->set($key, $value);
+}
+
+deployset('keep_releases', 5);
+deployset('shared_dirs', [
     'wp-content/uploads',
 ]);
-set('shared_files', [
+deployset('shared_files', [
     'wp-config.php',
     'wp/gc-config.ini.php',
 ]);
-set('writable_use_sudo', false);
-set('http_user', 'deploy');
+deployset('writable_use_sudo', false);
+deployset('http_user', 'deploy');
 
 env('rsync_src', __DIR__ . '/src');
-set('rsync', [
+deployset('rsync', [
     'exclude' => [
         'wp-content/upgrade',
         'wp-content/cache',

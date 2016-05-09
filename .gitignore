@@ -3,6 +3,7 @@
 .tmp/
 .vagrant/
 modules/
+reports/
 vendor/
 
 src/wp-config.php

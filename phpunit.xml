@@ -1,0 +1,22 @@
+<phpunit bootstrap="tests/bootstrap.php">
+
+  <testsuites>
+    <testsuite name="sinrumbofijo">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src/wp-content/themes/harmonux-core-child/lib</directory>
+    </whitelist>
+  </filter>
+
+  <logging>
+    <log type="coverage-html" target="reports/phpunit/coverage" lowUpperBound="35"
+        highLowerBound="70"/>
+    <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+    <log type="junit" target="reports/phpunit/phpunit.results.xml" logIncompleteSkipped="false"/>
+  </logging>
+
+</phpunit>
