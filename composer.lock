@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d62a321d0e13ab0da00b9bd4ff3beb6e",
-    "content-hash": "ac81eb7c7172a80f2e823b758be9d8c3",
+    "hash": "57d1fdedddc9d4168399db52c5a4a673",
+    "content-hash": "097cf11f9bc6fa962b5d7459772e8c0a",
     "packages": [
         {
             "name": "composer/installers",
@@ -191,6 +191,45 @@
                 "wordpress"
             ],
             "time": "2015-06-11 15:15:30"
+        },
+        {
+            "name": "se/selenium-server-standalone",
+            "version": "v2.53.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sveneisenschmidt/selenium-server-standalone.git",
+                "reference": "b67b6b933edce2ffa26f075247a05c464a335cea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sveneisenschmidt/selenium-server-standalone/zipball/b67b6b933edce2ffa26f075247a05c464a335cea",
+                "reference": "b67b6b933edce2ffa26f075247a05c464a335cea",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "bin": [
+                "bin/selenium-server-standalone"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Eisenschmidt",
+                    "email": "sven.eisenschmidt@gmail.com"
+                }
+            ],
+            "description": "Composer distribution of Selenium Server Standalone, the browser automation framework. Adds a executable to your composer bin directory.",
+            "homepage": "https://github.com/sveneisenschmidt/selenium-server-standalone",
+            "keywords": [
+                "selenium",
+                "testing"
+            ],
+            "time": "2016-03-21 15:02:15"
         },
         {
             "name": "wpackagist-plugin/autoptimize",
@@ -4061,7 +4100,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.0.5",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
