@@ -6,3 +6,5 @@ composer install --no-interaction
 ./vendor/bin/dep qa dev
 #STAGING
 ./vendor/bin/dep deploy staging
+#TEST
+./vendor/bin/behat --profile=staging

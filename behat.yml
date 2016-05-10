@@ -1,0 +1,16 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://sinrumbofijo.local'
+      browser_name: 'firefox'
+      sessions:
+        default:
+          goutte: ~
+        browser:
+          selenium2: ~
+      javascript_session: 'browser'
+
+staging:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://staging.sinrumbofijo.com'
