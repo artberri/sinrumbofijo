@@ -1,3 +1,4 @@
+@smoke
 Feature: Proper HTTP statuses
     In order to read blogs
     As a user
