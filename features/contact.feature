@@ -16,4 +16,4 @@ Feature: Contact
         | message_1 | Mensaje de prueba |
         | hdcaptcha_cp_contactformtoemail_post | iLoveBats123 |
         And I submit ".cpp_form" form
-        Then I should see "Please enter a valid captcha code"
+        Then I should see a "#hdcaptcha_error_1" element

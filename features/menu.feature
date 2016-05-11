@@ -7,20 +7,20 @@ Feature: Menu
 
     Scenario: ¿Quiénes somos?
         Given I am on the homepage
-        And I follow "¿Quiénes somos?"
+        And I click on "#menu-item-467 a"
         Then I should be on "/quienes-somos/"
 
     Scenario: Anunciate
         Given I am on "/quienes-somos/"
-        And I follow "Anunciate"
+        And I click on "#menu-item-468 a"
         Then I should be on "/anunciate/"
 
     Scenario: Contacto
         Given I am on "/anunciate/"
-        And I follow "Contacto"
+        And I click on "#menu-item-469 a"
         Then I should be on "/contacto/"
 
     Scenario: Homepage
         Given I am on "/contacto/"
-        And I follow "Inicio"
+        And I click on "#menu-item-466 a"
         Then I should be on the homepage
