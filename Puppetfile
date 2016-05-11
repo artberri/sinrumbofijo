@@ -11,3 +11,7 @@ mod 'artberri/mariadbrepo',
   :git => 'https://github.com/ve-interactive/puppet-mariadbrepo.git',
   :ref => 'a168e8976c92b521f19bfa1a4043152b5a231b72'
 mod 'puppetlabs/mysql', '2.2.3'
+mod 'joshbeard/display', '0.5.2'
+mod 'oskar-flores/puppet-jdk_oracle',
+  :git => 'https://github.com/oskar-flores/puppet-jdk_oracle.git',
+  :ref => '1da5d6c7cf561dbfe455bfacd1843778716b1347'
