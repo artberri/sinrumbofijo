@@ -7,4 +7,5 @@ composer install --no-interaction
 #STAGING
 ./vendor/bin/dep deploy staging
 #TEST
-./vendor/bin/behat --profile=staging
+./vendor/bin/selenium-server-standalone
+DISPLAY=:99 ./vendor/bin/behat

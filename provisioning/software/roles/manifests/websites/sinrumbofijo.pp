@@ -1,6 +1,12 @@
 class roles::websites::sinrumbofijo () {
 
-  class { 'profiles::configurations::sinrumbofijo::mariadb': }
+  class { 'profiles::applications::oracle_java8': } ->
+
+  # class { 'profiles::applications::xvfb': } ->
+
+  class { 'profiles::applications::firefox': } ->
+
+  class { 'profiles::configurations::sinrumbofijo::mariadb': } ->
 
   class { 'profiles::configurations::sinrumbofijo::php': } ->
 
