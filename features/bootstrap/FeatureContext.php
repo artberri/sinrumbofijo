@@ -5,12 +5,17 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
+use Behat\Mink\Driver\Selenium2Driver;
+use Behat\Testwork\Tester\Result\TestResult;
+use Behat\Mink\Exception\ElementNotFoundException;
 
 /**
  * Defines application features from the specific context.
  */
 class FeatureContext extends MinkContext implements Context, SnippetAcceptingContext
 {
+  private $failedCount = 0;
+
   /**
     * Initializes context.
     *
@@ -32,7 +37,13 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   public function clickElement($link)
   {
     $link = $this->fixStepArgument($link);
-    $this->getSession()->getPage()->find('css', $link)->click();
+    $locator = $this->getSession()->getPage()->find('css', $link);
+
+    if (null === $locator) {
+        throw new ElementNotFoundException($this->getSession()->getDriver(), 'css', 'css', $link);
+    }
+
+    $locator->click();
   }
 
   /**
@@ -45,7 +56,13 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   public function submitForm($link)
   {
     $link = $this->fixStepArgument($link);
-    $this->getSession()->getPage()->find('css', $link)->submit();
+    $locator = $this->getSession()->getPage()->find('css', $link);
+
+    if (null === $locator) {
+        throw new ElementNotFoundException($this->getSession()->getDriver(), 'css', 'css', $link);
+    }
+
+    $locator->submit();
   }
 
   /**
@@ -69,6 +86,26 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     $value = implode(' ', $words);
 
     $this->getSession()->getPage()->fillField($field, $value);
+  }
+
+  /**
+  * Take screenshot when step fails.
+  * Works only with Selenium2Driver.
+  *
+  * @AfterStep
+  */
+  public function takeScreenshotAfterFailedStep($scope)
+  {
+    if (TestResult::FAILED === $scope->getTestResult()->getResultCode()) {
+      $driver = $this->getSession()->getDriver();
+      if ($driver instanceof Selenium2Driver) {
+        if ( !file_exists('reports/html/behat') ) {
+            mkdir('reports/html/behat', 0777, true);
+        }
+        file_put_contents('reports/html/behat/test_' . md5(time()) . '.png', $this->getSession()->getDriver()->getScreenshot());
+        ++$this->failedCount;
+      }
+    }
   }
 
 }

@@ -9,7 +9,17 @@ default:
         browser:
           selenium2: ~
       javascript_session: 'browser'
-
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true
+  formatters:
+    pretty: true
+    html:
+      output_path: %paths.base%/reports/html/behat
 staging:
   extensions:
     Behat\MinkExtension:

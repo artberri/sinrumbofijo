@@ -10,9 +10,9 @@ Feature: Article
 
     @smoke
     Scenario: See sections
-        Then I should see a "#commentform" element
-        And I should see a ".smartlib-related-posts" element
-        And I should see a ".harmonux_widget_recent_entries" element
+        Then I should see "Deja un comentario"
+        And I should see "Entradas relacionadas"
+        And I should see "Entradas recientes"
 
     Scenario: Make a comment
         When I fill in the following:
@@ -21,4 +21,4 @@ Feature: Article
         | url | http://example.com |
         And I fill in "comment" with 15 random words
         And I press "Publicar comentario"
-        Then I should see a ".smartlib-comments-title .fa-comment" element
+        Then I should see "Testuser"
