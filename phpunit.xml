@@ -13,10 +13,10 @@
   </filter>
 
   <logging>
-    <log type="coverage-html" target="reports/phpunit/coverage" lowUpperBound="35"
+    <log type="coverage-html" target="reports/html/phpunit/coverage" lowUpperBound="35"
         highLowerBound="70"/>
     <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-    <log type="junit" target="reports/phpunit/phpunit.results.xml" logIncompleteSkipped="false"/>
+    <log type="junit" target="reports/phpunit.results.xml" logIncompleteSkipped="false"/>
   </logging>
 
 </phpunit>
