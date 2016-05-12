@@ -27,6 +27,17 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   {
   }
 
+ /**
+   * @BeforeStep
+   */
+  public function beforeStep()
+  {
+    $driver = $this->getSession()->getDriver();
+    if ($driver instanceof Selenium2Driver) {
+      $driver->maximizeWindow();
+    }
+  }
+
   /**
     * Clicks link with specified id|title|alt|text
     * Example: When I follow "Log In"
