@@ -7,6 +7,7 @@ Feature: Contact
 
     Background:
         Given I am on the homepage
+        And I click on "#top-switches .fa-align-justify"
         And I follow "Contacto"
 
     Scenario: Invalid Contact Form

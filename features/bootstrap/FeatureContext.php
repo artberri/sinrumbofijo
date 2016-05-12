@@ -27,14 +27,26 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   {
   }
 
- /**
-   * @BeforeStep
-   */
+  /**
+    * @BeforeScenario
+    *
+    * @param BeforeScenarioScope $scope
+    *
+    */
+  public function setUpTestEnvironment($scope)
+  {
+      $this->currentScenario = $scope->getScenario();
+  }
+
+  /**
+    * @BeforeStep
+    */
   public function beforeStep()
   {
     $driver = $this->getSession()->getDriver();
     if ($driver instanceof Selenium2Driver) {
-      $driver->maximizeWindow();
+      // $driver->maximizeWindow();
+      $driver->resizeWindow(944, 900, 'current');
     }
   }
 
@@ -100,14 +112,42 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   }
 
   /**
+    * @AfterStep
+    *
+    * @param AfterStepScope $scope
+    */
+  public function afterStep($scope)
+  {
+    //if test has failed, and is not an api test, get screenshot
+    if (TestResult::FAILED === $scope->getTestResult()->getResultCode()) {
+      $driver = $this->getSession()->getDriver();
+
+      if ($driver instanceof Selenium2Driver) {
+        //create filename string
+        $featureFolder = str_replace(' ', '', $scope->getFeature()->getTitle());
+
+        $scenarioName = $this->currentScenario->getTitle();
+        $fileName = str_replace(' ', '', $scenarioName) . '.png';
+
+        //create screenshots directory if it doesn't exist
+        if (!file_exists('reports/html/behat/assets/screenshots/' . $featureFolder)) {
+            mkdir('reports/html/behat/assets/screenshots/' . $featureFolder, 0777, true);
+        }
+
+        //take screenshot and save as the previously defined filename
+        file_put_contents('reports/html/behat/assets/screenshots/' . $featureFolder . '/' . $fileName, $this->getSession()->getDriver()->getScreenshot());
+      }
+    }
+  }
+
+  /**
   * Take screenshot when step fails.
   * Works only with Selenium2Driver.
   *
-  * @AfterStep
-  */
+  *
   public function takeScreenshotAfterFailedStep($scope)
   {
-    if (TestResult::FAILED === $scope->getTestResult()->getResultCode()) {
+    if (u) {
       $driver = $this->getSession()->getDriver();
       if ($driver instanceof Selenium2Driver) {
         if ( !file_exists('reports/html/behat') ) {
@@ -117,6 +157,6 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         ++$this->failedCount;
       }
     }
-  }
+  }*/
 
 }

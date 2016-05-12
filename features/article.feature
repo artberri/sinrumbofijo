@@ -6,7 +6,7 @@ Feature: Article
 
     Background:
         Given I am on the homepage
-        And I click on "article.post"
+        And I click on ".smartlib-grid-list article.post"
 
     @smoke
     Scenario: See sections
@@ -16,7 +16,7 @@ Feature: Article
 
     Scenario: Make a comment
         When I fill in the following:
-        | author |Testuser |
+        | author | Testuser |
         | email | test@example.com |
         | url | http://example.com |
         And I fill in "comment" with 15 random words
