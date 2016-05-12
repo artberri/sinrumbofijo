@@ -7,7 +7,7 @@ Feature: Search
 
     Background:
         Given I am on the homepage
-        And I click on "#top-switches a"
+        And I click on "#top-switches .fa-search"
 
     Scenario: Search for Viajes
         When  I fill in "s" with "Viajes"

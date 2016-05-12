@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f4871a36034a0ee2d672fccc1392bfc",
-    "content-hash": "ae6fbf82139838d8f0de2f55b0a0b526",
+    "hash": "49b538f70d9d629578cc44f90af8380e",
+    "content-hash": "d3e2c181c35eed85095b51b4220fe10d",
     "packages": [
         {
             "name": "composer/installers",
@@ -1233,22 +1233,27 @@
         },
         {
             "name": "emuse/behat-html-formatter",
-            "version": "v0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dutchiexl/BehatHtmlFormatterPlugin.git",
-                "reference": "c7a51a1013c0ee6fdc4a00e93842d5f9c8bc98ec"
+                "url": "https://github.com/artberri/BehatHtmlFormatterPlugin.git",
+                "reference": "f4d4a3e23b747ddc7ed9825c18ffaf83821b7845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dutchiexl/BehatHtmlFormatterPlugin/zipball/c7a51a1013c0ee6fdc4a00e93842d5f9c8bc98ec",
-                "reference": "c7a51a1013c0ee6fdc4a00e93842d5f9c8bc98ec",
+                "url": "https://api.github.com/repos/artberri/BehatHtmlFormatterPlugin/zipball/f4d4a3e23b747ddc7ed9825c18ffaf83821b7845",
+                "reference": "f4d4a3e23b747ddc7ed9825c18ffaf83821b7845",
                 "shasum": ""
             },
             "require": {
                 "behat/behat": "~3.0",
+                "behat/gherkin": "~4.2",
                 "php": ">=5.3.0",
-                "twig/twig": "~1.0"
+                "twig/twig": "~1.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1",
+                "symfony/process": ">2.3,<4.0"
             },
             "type": "library",
             "autoload": {
@@ -1256,7 +1261,6 @@
                     "emuse\\BehatHTMLFormatter\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Neal Vanmeert",
@@ -1264,7 +1268,10 @@
                 }
             ],
             "description": "This will create a html formatter for Behat.",
-            "time": "2015-05-27 15:09:34"
+            "support": {
+                "source": "https://github.com/artberri/BehatHtmlFormatterPlugin/tree/master"
+            },
+            "time": "2016-04-13 10:16:19"
         },
         {
             "name": "evenement/evenement",
@@ -2298,20 +2305,23 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4|~5"
             },
             "type": "library",
             "autoload": {
@@ -2335,7 +2345,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-21 08:01:12"
+            "time": "2016-05-12 18:03:57"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -4608,7 +4618,8 @@
     "stability-flags": {
         "wp-coding-standards/wpcs": 20,
         "10up/wp_mock": 20,
-        "hamcrest/hamcrest-php": 20
+        "hamcrest/hamcrest-php": 20,
+        "emuse/behat-html-formatter": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

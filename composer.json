@@ -7,6 +7,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/artberri/hamcrest-php"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/artberri/BehatHtmlFormatterPlugin"
         }
     ],
     "require": {
@@ -36,7 +40,7 @@
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "^1.2",
         "behat/mink-selenium2-driver": "^1.3",
-        "emuse/behat-html-formatter": "^0.1.0"
+        "emuse/behat-html-formatter": "dev-master#fca9a80ffcec20b7624e3cfc0d5454d443e1e087"
     },
     "extra": {
         "wordpress-install-dir": "src/wp",
