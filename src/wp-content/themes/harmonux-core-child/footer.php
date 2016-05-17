@@ -1,6 +1,6 @@
 <?php
 //if sidebar is large-1 the left side
-if(check_position_of_component('sidebar', 'left'))
+if (check_position_of_component('sidebar', 'left'))
 	get_sidebar();
 
 ?>
