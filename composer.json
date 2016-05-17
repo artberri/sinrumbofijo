@@ -24,6 +24,7 @@
         "wpackagist-plugin/default-featured-image": "1.6.*",
         "wpackagist-plugin/contact-form-to-email": "^1.1",
         "wpackagist-plugin/autoptimize": "2.0.*",
+        "wpackagist-plugin/mailchimp-for-wp": "3.1.*",
         "wpackagist-theme/harmonux-core": "1.3.*",
         "se/selenium-server-standalone": "^2.53"
     },
@@ -32,7 +33,7 @@
         "deployer/deployer": "^3.2",
         "deployphp/recipes": "^3.1",
         "squizlabs/php_codesniffer": "^2.6",
-        "wp-coding-standards/wpcs": "dev-master",
+        "wp-coding-standards/wpcs": "dev-master#f50ccffe5ef3a77e84b3be9487cb7a477248a8ea",
         "phpunit/phpunit": "^4.8",
         "10up/wp_mock": "dev-master",
         "hamcrest/hamcrest-php": "dev-master#bfe9d545ff1d9e30f7443257cc5d1fcfbf492bff",

@@ -14,3 +14,28 @@
 .smartlib-tags-article a:after {
   display: none;
 }
+
+.post-subscribe-form h3 {
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+#main-footer {
+    min-height: auto;
+}
+
+.main-footer .row {
+    margin-top: 0;
+}
+
+.footer-navigation p {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-navigation p a {
+    text-decoration: underline;
+}
