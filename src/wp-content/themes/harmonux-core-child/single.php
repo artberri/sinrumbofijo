@@ -21,7 +21,12 @@ $category = get_the_category();
 
     <?php harmonux_prev_next_post_navigation(); ?>
 
-      <?php harmonux_get_related_post_box($category[0]->cat_ID, get_the_ID(), 8, 4); ?>
+    <section class="post-subscribe-form">
+        <h3>Si te ha gustado, ¡suscríbete!</h3>
+        <?php echo do_shortcode('[mc4wp_form id="482"]'); ?>
+    </section>
+
+    <?php harmonux_get_related_post_box($category[0]->cat_ID, get_the_ID(), 8, 4); ?>
 
     <?php comments_template('', true); ?>
 
