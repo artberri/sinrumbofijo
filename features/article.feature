@@ -6,7 +6,8 @@ Feature: Article
 
     Background:
         Given I am on the homepage
-        And I click on ".smartlib-grid-list article.post"
+        And I hover over the element ".smartlib-grid-list article.post .wp-post-image"
+        And I click on ".smartlib-grid-list article.post .smartlib-caption-link"
 
     @smoke
     Scenario: See sections

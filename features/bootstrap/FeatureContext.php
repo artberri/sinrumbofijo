@@ -112,6 +112,22 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
   }
 
   /**
+   * @When /^I hover over the element "(?P<locator>(?:[^"]|\\")*)"$/
+   */
+  public function iHoverOverTheElement($locator)
+  {
+    $element = $this->getSession()->getPage()->find('css', $locator);
+
+    // errors must not pass silently
+    if (null === $element) {
+        throw new \InvalidArgumentException(sprintf('Could not evaluate CSS selector: "%s"', $locator));
+    }
+
+    // ok, let's hover it
+    $element->mouseOver();
+  }
+
+  /**
     * @AfterStep
     *
     * @param AfterStepScope $scope
@@ -139,24 +155,5 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
       }
     }
   }
-
-  /**
-  * Take screenshot when step fails.
-  * Works only with Selenium2Driver.
-  *
-  *
-  public function takeScreenshotAfterFailedStep($scope)
-  {
-    if (u) {
-      $driver = $this->getSession()->getDriver();
-      if ($driver instanceof Selenium2Driver) {
-        if ( !file_exists('reports/html/behat') ) {
-            mkdir('reports/html/behat', 0777, true);
-        }
-        file_put_contents('reports/html/behat/test_' . md5(time()) . '.png', $this->getSession()->getDriver()->getScreenshot());
-        ++$this->failedCount;
-      }
-    }
-  }*/
 
 }
