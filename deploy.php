@@ -3,6 +3,7 @@ require 'recipe/common.php';
 require 'vendor/deployphp/recipes/recipes/configure.php';
 require 'vendor/deployphp/recipes/recipes/rsync.php';
 require 'recipes/qa.php';
+require 'recipes/at.php';
 
 date_default_timezone_set('UTC');
 
