@@ -18,7 +18,7 @@ task('at', function () {
   writeln('<info>Waiting until selenium is started</info>');
   $output = runLocally('sleep 7');
 
-  $output = runLocally($testCommand);
+  $output = runLocally($testCommand, 600);
   writeln('<info>' . $output . '</info>');
 
   $output = runLocally('kill ' . $seleniumPid);
