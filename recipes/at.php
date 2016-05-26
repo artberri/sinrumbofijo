@@ -11,6 +11,9 @@ task('at', function () {
   if ('dev' != $stage) {
     $testCommand .= ' --profile=' . $stage;
   }
+  if ('production' == $stage) {
+     $testCommand .= ' --tags=\'@smoke\'';
+  }
 
   $seleniumPid = runLocally('nohup ./vendor/bin/selenium-server-standalone > /dev/null 2> /dev/null & echo $!');
   writeln('<info>Selenium running with pid: ' . $seleniumPid . '</info>');
