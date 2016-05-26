@@ -104,4 +104,46 @@ class Harmonux_Core_Child_Test extends PHPUnit_Framework_TestCase {
     $srf_theme = new SRF_Theme();
     $srf_theme->footer();
   }
+
+  public function testProjectAvailableFontsMethod()
+  {
+    $fonts = array(
+      'arial' => array(
+        'name' => 'Arial',
+        'import' => '',
+        'css' => 'font-family: Arial, sans-serif;',
+      ),
+      'cantarell' => array(
+        'name' => 'Cantarell',
+        'import' => '@import url(http://fonts.googleapis.com/css?family=Cantarell);',
+        'css' => 'font-family: \'Cantarell\', sans-serif;',
+      ),
+      'droid' => array(
+        'name' => 'Droid Sans',
+        'import' => '@import url(http://fonts.googleapis.com/css?family=Droid+Sans);',
+        'css' => 'font-family: \'Droid Sans\', sans-serif;',
+      ),
+    );
+
+    $srf_theme = new SRF_Theme();
+    $filteredFonts = $srf_theme->project_available_fonts( $fonts );
+
+    $this->assertEquals($filteredFonts, array(
+      'arial' => array(
+        'name' => 'Arial',
+        'import' => '',
+        'css' => 'font-family: Arial, sans-serif;',
+      ),
+      'cantarell' => array(
+        'name' => 'Cantarell',
+        'import' => '@import url(//fonts.googleapis.com/css?family=Cantarell);',
+        'css' => 'font-family: \'Cantarell\', sans-serif;',
+      ),
+      'droid' => array(
+        'name' => 'Droid Sans',
+        'import' => '@import url(//fonts.googleapis.com/css?family=Droid+Sans);',
+        'css' => 'font-family: \'Droid Sans\', sans-serif;',
+      ),
+    ));
+  }
 }

@@ -7,3 +7,5 @@ $srf_theme = new SRF_Theme();
 add_action( 'after_setup_theme', array( $srf_theme, 'setup' ) );
 add_action( 'wp_enqueue_scripts', array( $srf_theme, 'enqueue_scripts' ) );
 add_action( 'wp_footer', array( $srf_theme, 'footer' ) );
+
+add_filter( 'project_available_fonts', array( $srf_theme, 'project_available_fonts' ), '10', '2' );
