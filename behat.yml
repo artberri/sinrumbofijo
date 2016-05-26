@@ -24,3 +24,7 @@ staging:
   extensions:
     Behat\MinkExtension:
       base_url: 'http://staging.sinrumbofijo.com'
+production:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://www.sinrumbofijo.com'
