@@ -34,4 +34,12 @@ class SRF_Theme
       wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-572e04a1b1e24ca4' );
     }
   }
+
+  public function project_available_fonts( $fonts ) {
+    return array_map( function( $font ) {
+      $font['import'] = str_replace( 'http://', '//', $font['import'] );
+
+      return $font;
+    }, $fonts);
+  }
 }

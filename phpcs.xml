@@ -4,7 +4,7 @@
 
   <file>src/wp-content/themes/harmonux-core-child</file>
 
-  <arg name="report" value="summary"/>
+  <arg name="report" value="full"/>
   <arg value="np"/>
 
   <rule ref="PEAR.WhiteSpace.ScopeIndent">
