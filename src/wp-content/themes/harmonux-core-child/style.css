@@ -33,9 +33,26 @@
 .footer-navigation p {
     font-size: 12px;
     text-align: center;
-    margin: 0;
+    margin: 0 0 20px;
 }
 
 .footer-navigation p a {
     text-decoration: underline;
+}
+
+.footer-claim {
+    text-align: center;
+    margin: 0;
+    background: #3F5369;
+}
+
+.footer-claim p {
+    font-size: 10px;
+    margin: 0;
+    line-height: 26px;
+    color: #99B1CC;
+}
+
+#footer-bottom {
+    padding: 20px 0 0;
 }
