@@ -9,7 +9,8 @@ class SRF_Theme
   public function enqueue_scripts() {
     wp_dequeue_style( 'smartlib-structure' );
 
-    wp_enqueue_style( 'smartlib-structure', get_template_directory_uri() . '/style.css',
+    wp_enqueue_style( 'smartlib-structure',
+      get_template_directory_uri() . '/style.css',
       array(
         'harmonux-responsive-tables',
         'harmonux-flexslider',
@@ -17,15 +18,16 @@ class SRF_Theme
         'smartlib-font-icon',
       )
     );
+
     wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array(
-          'smartlib-structure',
-          'harmonux-responsive-tables',
-          'harmonux-flexslider',
-          'smartlib-photoswipe-css',
-          'smartlib-font-icon',
-        )
+      get_stylesheet_directory_uri() . '/style.css',
+      array(
+        'smartlib-structure',
+        'harmonux-responsive-tables',
+        'harmonux-flexslider',
+        'smartlib-photoswipe-css',
+        'smartlib-font-icon',
+      )
     );
   }
 
