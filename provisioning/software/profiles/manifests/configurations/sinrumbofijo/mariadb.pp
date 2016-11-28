@@ -1,6 +1,6 @@
 class profiles::configurations::sinrumbofijo::mariadb {
 
-  $mariadb_package_version = '10.1.14-1.el7.centos'
+  $mariadb_package_version = '10.1.19-1.el7.centos'
   $mariadb_repo_version = '10.1'
 
   class { 'profiles::applications::mariadb':
